@@ -17,3 +17,10 @@ class Purchase(models.Model):
     product = models.ForeignKey(Product)
     amount_to_sell = models.DecimalField(max_digits=10, decimal_places=3)
     left_amount = models.DecimalField(max_digits=10, decimal_places=3)
+
+    @property
+    def percentage(self):
+        try:
+            return (self.amount_to_sell * 100) / self.product.amount
+        except Exception as e:
+            return None
