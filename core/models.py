@@ -6,6 +6,7 @@ class Product(models.Model):
     type = models.CharField(max_length=30, choices=(('advance', 'Advance'),))
     date = models.DateField(verbose_name='Date')
     amount = models.DecimalField(max_digits=10, decimal_places=3)
+    amount_discount = models.DecimalField(max_digits=10, decimal_places=3, default=0)
 
 
 class Investor(models.Model):
