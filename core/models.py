@@ -1,7 +1,3 @@
-# Products
-# Purchases
-# Investor
-
 from django.db import models
 
 
