@@ -24,3 +24,5 @@ class Purchase(models.Model):
             return (self.amount_to_sell * 100) / self.product.amount
         except Exception as e:
             return None
+
+from core.signals import *

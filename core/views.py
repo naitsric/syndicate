@@ -22,3 +22,4 @@ class InvestorViewSet(viewsets.ModelViewSet):
 class PurchaseViewSet(viewsets.ModelViewSet):
     serializer_class = PurchaseSerializer
     queryset = Purchase.objects.all()
+    filter_fields = ('product__id', )
